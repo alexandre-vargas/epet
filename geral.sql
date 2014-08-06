@@ -119,3 +119,6 @@ UNLOCK TABLES;
 
 
 ALTER TABLE `epet`.`loja` ADD COLUMN `log_data_alt` TIMESTAMP NULL  AFTER `tel2` ;
+
+ALTER TABLE `epet`.`loja`
+ADD COLUMN `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP() AFTER `tel2`;
