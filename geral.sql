@@ -132,3 +132,13 @@ ADD COLUMN `log_data_alt` TIMESTAMP NULL AFTER `log_data_insert`;
 
 ALTER TABLE `epet`.`usuario` 
 CHANGE COLUMN `log_data_insert` `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `id_pessoa`;
+
+CREATE TABLE `epet`.`responsavel` (
+  `id_responsavel` INT NOT NULL,
+  `id_loja` INT NOT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  PRIMARY KEY (`id_responsavel`, `id_loja`));
+  
+  ALTER TABLE `epet`.`pessoa` 
+ADD COLUMN `status` TINYINT NULL AFTER `log_data_alt`;
