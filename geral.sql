@@ -122,3 +122,13 @@ ALTER TABLE `epet`.`loja` ADD COLUMN `log_data_alt` TIMESTAMP NULL  AFTER `tel2`
 
 ALTER TABLE `epet`.`loja`
 ADD COLUMN `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP() AFTER `tel2`;
+
+ALTER TABLE `epet`.`loja` 
+RENAME TO  `epet`.`pessoa` ;
+
+ALTER TABLE `epet`.`produto` 
+ADD COLUMN `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `nome`,
+ADD COLUMN `log_data_alt` TIMESTAMP NULL AFTER `log_data_insert`;
+
+ALTER TABLE `epet`.`usuario` 
+CHANGE COLUMN `log_data_insert` `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `id_pessoa`;
