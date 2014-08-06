@@ -116,3 +116,6 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2014-08-06 11:43:11
+
+
+ALTER TABLE `epet`.`loja` ADD COLUMN `log_data_alt` TIMESTAMP NULL  AFTER `tel2` ;
