@@ -142,3 +142,11 @@ CREATE TABLE `epet`.`responsavel` (
   
   ALTER TABLE `epet`.`pessoa` 
 ADD COLUMN `status` TINYINT NULL AFTER `log_data_alt`;
+
+CREATE TABLE `epet`.`loja` (
+  `id` INT NOT NULL,
+  `id_pessoa` INT NULL,
+  `logo` TEXT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  PRIMARY KEY (`id`));
