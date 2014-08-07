@@ -252,6 +252,11 @@ CREATE TABLE `epet`.`categoria` (
   `log_usuario_insert` VARCHAR(20) NULL,
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
+  
+  CREATE TABLE `epet`.`animal_x_pessoa` (
+  `id_animal` INT NOT NULL,
+  `id_pessoa` INT NULL,
+  PRIMARY KEY (`id_animal`));
 
 
   
