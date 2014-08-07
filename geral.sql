@@ -180,5 +180,6 @@ CREATE TABLE `epet`.`menu` (
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
   
-  
+  ALTER TABLE `epet`.`menu` 
+ADD COLUMN `status` TINYINT NULL AFTER `log_usuario_alt`;
   
