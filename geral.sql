@@ -214,5 +214,16 @@ CREATE TABLE `epet`.`categoria` (
   `log_usuario_insert` VARCHAR(20) NULL,
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id_menu`));
+  
+  CREATE TABLE `epet`.`produto_x_subcategoria` (
+  `id_produto` INT NOT NULL,
+  `id_subcategoria` INT NULL,
+  `status` TINYINT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id_produto`));
+
 
   
