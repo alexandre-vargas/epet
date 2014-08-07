@@ -150,3 +150,13 @@ CREATE TABLE `epet`.`loja` (
   `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
   `log_data_alt` TIMESTAMP NULL,
   PRIMARY KEY (`id`));
+
+
+ALTER TABLE `epet`.`loja` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTER `log_data_alt` ;
+
+ALTER TABLE `epet`.`pessoa` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTER `status` ;
+
+ALTER TABLE `epet`.`produto` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTER `log_data_alt` ;
+
+ALTER TABLE `epet`.`responsavel` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTER `log_data_alt` ;
+
