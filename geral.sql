@@ -224,6 +224,25 @@ CREATE TABLE `epet`.`categoria` (
   `log_usuario_insert` VARCHAR(20) NULL,
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id_produto`));
+  
+  CREATE TABLE `epet`.`animal` (
+  `id` INT NOT NULL,
+  `id_animal_tipo` INT NULL,
+  `nome` VARCHAR(100) NULL,
+  `nascimento` TIMESTAMP NULL,
+  `raca` VARCHAR(100) NULL,
+  `cor` VARCHAR(20) NULL,
+  `porte` VARCHAR(20) NULL,
+  `sexo` TINYINT NULL,
+  `castrado` TINYINT NULL,
+  `observacao` TEXT NULL,
+  `status` TINYINT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
+
 
 
   
