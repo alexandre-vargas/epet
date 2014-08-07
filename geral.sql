@@ -160,3 +160,14 @@ ALTER TABLE `epet`.`produto` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTE
 
 ALTER TABLE `epet`.`responsavel` ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL  AFTER `log_data_alt` ;
 
+CREATE TABLE `epet`.`menu` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(150) NULL,
+  `icone` TEXT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
+  
+  
