@@ -182,4 +182,15 @@ CREATE TABLE `epet`.`menu` (
   
   ALTER TABLE `epet`.`menu` 
 ADD COLUMN `status` TINYINT NULL AFTER `log_usuario_alt`;
+
+CREATE TABLE `epet`.`categoria` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(150) NULL,
+  `icone` TEXT NULL,
+  `status` TINYINT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
   
