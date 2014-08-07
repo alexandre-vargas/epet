@@ -194,3 +194,15 @@ CREATE TABLE `epet`.`categoria` (
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
   
+  CREATE TABLE `epet`.`subcategoria` (
+  `id` INT NOT NULL,
+  `id_categoria` VARCHAR(45) NULL,
+  `icone` TEXT NULL,
+  `status` TINYINT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
+
+  
