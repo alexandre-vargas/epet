@@ -273,6 +273,8 @@ ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL AFTER `log_usuario_insert
 ALTER TABLE `epet`.`loja` 
 ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
 
+ALTER TABLE `epet`.`pessoa` 
+ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
 
 
   
