@@ -282,5 +282,6 @@ ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
 ALTER TABLE `epet`.`usuario` 
 ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_data_alt`;
 
-
+ALTER TABLE `epet`.`produto` 
+ADD COLUMN `descricao` TEXT NULL AFTER `log_usuario_insert`;
   
