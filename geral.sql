@@ -270,5 +270,9 @@ ADD COLUMN `log_data_alt` TIMESTAMP NULL AFTER `log_data_insert`,
 ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_data_alt`,
 ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL AFTER `log_usuario_insert
 
+ALTER TABLE `epet`.`loja` 
+ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
+
+
 
   
