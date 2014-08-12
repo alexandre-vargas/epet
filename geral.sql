@@ -264,5 +264,11 @@ RENAME TO  `epet`.`animal_x_tipo` ;
 ALTER TABLE `epet`.`produto` 
 ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt
 
+ALTER TABLE `epet`.`animal_x_pessoa` 
+ADD COLUMN `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP() AFTER `id_pessoa`,
+ADD COLUMN `log_data_alt` TIMESTAMP NULL AFTER `log_data_insert`,
+ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_data_alt`,
+ADD COLUMN `log_usuario_alt` VARCHAR(20) NULL AFTER `log_usuario_insert
+
 
   
