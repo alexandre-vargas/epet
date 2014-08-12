@@ -302,5 +302,15 @@ CREATE TABLE `epet`.`servico` (
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
 
+  CREATE TABLE `epet`.`produto_fisico` (
+  `id` INT NOT NULL,
+  `id_produto` INT NULL,
+  `peso` DECIMAL(10,4) NULL,
+  `sku` VARCHAR(50) NOT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
 
   
