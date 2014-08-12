@@ -276,5 +276,8 @@ ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
 ALTER TABLE `epet`.`pessoa` 
 ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
 
+ALTER TABLE `epet`.`responsavel` 
+ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt`;
+
 
   
