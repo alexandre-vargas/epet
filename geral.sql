@@ -289,4 +289,8 @@ ALTER TABLE `epet`.`produto`
 ADD COLUMN `imagem_produto` TEXT NULL AFTER `descricao`,
 ADD COLUMN `imagem_home` TEXT NULL AFTER `imagem_produto`;
 
+ALTER TABLE `epet`.`loja` 
+ADD COLUMN `delivery` TINYINT NULL AFTER `log_usuario_insert`;
+
+
   
