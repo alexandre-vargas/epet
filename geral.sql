@@ -257,6 +257,12 @@ CREATE TABLE `epet`.`categoria` (
   `id_animal` INT NOT NULL,
   `id_pessoa` INT NULL,
   PRIMARY KEY (`id_animal`));
+  
+  ALTER TABLE `epet`.`animal_tipo` 
+RENAME TO  `epet`.`animal_x_tipo` ;
+
+ALTER TABLE `epet`.`produto` 
+ADD COLUMN `log_usuario_insert` VARCHAR(20) NULL AFTER `log_usuario_alt
 
 
   
