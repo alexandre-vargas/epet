@@ -312,5 +312,20 @@ CREATE TABLE `epet`.`servico` (
   `log_usuario_insert` VARCHAR(20) NULL,
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
+  
+  CREATE TABLE `epet`.`estoque` (
+  `id` INT NOT NULL,
+  `id_produto` INT NULL,
+  `quantidade` INT NOT NULL,
+  `data_entrada` TIMESTAMP NULL,
+  `data_validade` TIMESTAMP NULL,
+  `preco_compra` DECIMAL(10,2) NULL,
+  `preco_venda` DECIMAL(10,2) NOT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`))
+COMMENT = '			';
 
   
