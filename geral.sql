@@ -332,4 +332,11 @@ ALTER TABLE `epet`.`estoque`
 ADD COLUMN `preco_anterior` DECIMAL(10,2) NULL COMMENT 'Preço imputado manualmente. Este preço pode ser fidedigno ou seja, preço real anterior. Porém, como este preço é imputado pelo usuário pode ser manipulado conforme sua intenção ou seja não necessáriamente é o preço real anterior.' AFTER `log_usuario_alt`;
 
 
+ALTER TABLE `epet`.`responsavel` 
+CHANGE COLUMN `id_responsavel` `id` INT(11) NOT NULL AUTO_INCREMENT ,
+ADD COLUMN `id_pessoa` INT NOT NULL AFTER `log_usuario_insert`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`, `id_pessoa`);
+
+
   
