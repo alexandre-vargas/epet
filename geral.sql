@@ -328,4 +328,8 @@ CREATE TABLE `epet`.`servico` (
   PRIMARY KEY (`id`))
 COMMENT = '			';
 
+ALTER TABLE `epet`.`estoque` 
+ADD COLUMN `preco_anterior` DECIMAL(10,2) NULL COMMENT 'Preço imputado manualmente. Este preço pode ser fidedigno ou seja, preço real anterior. Porém, como este preço é imputado pelo usuário pode ser manipulado conforme sua intenção ou seja não necessáriamente é o preço real anterior.' AFTER `log_usuario_alt`;
+
+
   
