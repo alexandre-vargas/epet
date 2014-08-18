@@ -312,5 +312,31 @@ CREATE TABLE `epet`.`servico` (
   `log_usuario_insert` VARCHAR(20) NULL,
   `log_usuario_alt` VARCHAR(20) NULL,
   PRIMARY KEY (`id`));
+  
+  CREATE TABLE `epet`.`estoque` (
+  `id` INT NOT NULL,
+  `id_produto` INT NULL,
+  `quantidade` INT NOT NULL,
+  `data_entrada` TIMESTAMP NULL,
+  `data_validade` TIMESTAMP NULL,
+  `preco_compra` DECIMAL(10,2) NULL,
+  `preco_venda` DECIMAL(10,2) NOT NULL,
+  `log_data_insert` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP(),
+  `log_data_alt` TIMESTAMP NULL,
+  `log_usuario_insert` VARCHAR(20) NULL,
+  `log_usuario_alt` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`))
+COMMENT = '			';
+
+ALTER TABLE `epet`.`estoque` 
+ADD COLUMN `preco_anterior` DECIMAL(10,2) NULL COMMENT 'Preço imputado manualmente. Este preço pode ser fidedigno ou seja, preço real anterior. Porém, como este preço é imputado pelo usuário pode ser manipulado conforme sua intenção ou seja não necessáriamente é o preço real anterior.' AFTER `log_usuario_alt`;
+
+
+ALTER TABLE `epet`.`responsavel` 
+CHANGE COLUMN `id_responsavel` `id` INT(11) NOT NULL AUTO_INCREMENT ,
+ADD COLUMN `id_pessoa` INT NOT NULL AFTER `log_usuario_insert`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`, `id_pessoa`);
+
 
   
