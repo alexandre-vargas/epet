@@ -220,34 +220,6 @@ LOCK TABLES `responsavel` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `menu_x_subcategoria`
---
-
-DROP TABLE IF EXISTS `menu_x_subcategoria`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `menu_x_subcategoria` (
-  `id_menu` int(11) NOT NULL,
-  `id_categoria` int(11) NOT NULL,
-  `status` tinyint(4) DEFAULT NULL,
-  `log_data_insert` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `log_data_alt` timestamp NULL DEFAULT NULL,
-  `log_usuario_insert` varchar(20) DEFAULT NULL,
-  `log_usuario_alt` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id_menu`,`id_categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `menu_x_subcategoria`
---
-
-LOCK TABLES `menu_x_subcategoria` WRITE;
-/*!40000 ALTER TABLE `menu_x_subcategoria` DISABLE KEYS */;
-/*!40000 ALTER TABLE `menu_x_subcategoria` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `loja`
 --
 
@@ -534,3 +506,7 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2014-08-20 15:43:28
+
+ALTER TABLE `epet`.`categoria` 
+ADD COLUMN `id_menu` INT NOT NULL AFTER `id`;
+
